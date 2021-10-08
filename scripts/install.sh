@@ -4,8 +4,11 @@ sudo -H pip3 install --upgrade pip
 sudo -H pip3 install virtualenv django virtualenv
 set_add="/home/ubuntu/code_pipeline_lightsail_django_test/"
 sudo virtualenv $set_add/venv
-sudo source $set_add/venv/bin/activate
-sudo pip3 install django gunicorn
+activate(){
+    $set_add/venv/bin/activate
+    pip3 install django gunicorn
+}
+activate
 
 
 
