@@ -1,0 +1,14 @@
+server {
+    listen 80;
+    server_name 35.154.218.78;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/ubuntu/code_pipeline_lightsail_django_test;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+}
