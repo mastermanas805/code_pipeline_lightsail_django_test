@@ -7,7 +7,7 @@ After=network.target
 User=ubuntu
 Group=www-data
 WorkingDirectory=/home/ubuntu/code_pipeline_lightsail_django_test
-ExecStart=/home/sammy/code_pipeline_lightsail_django_test/venv/bin/gunicorn \
+ExecStart=/home/ubuntu/code_pipeline_lightsail_django_test/venv/bin/gunicorn \
           --access-logfile - \
           --workers 3 \
           --bind unix:/run/gunicorn.sock \
