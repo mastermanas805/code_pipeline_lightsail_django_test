@@ -1,5 +1,6 @@
 #!/bin/bash
 set_add="/home/ubuntu/code_pipeline_lightsail_django_test/"
+cat $set_add/scripts/gunicorn.socket > /etc/systemd/system/gunicorn.service
 cat $set_add/scripts/gunicorn.service > /etc/systemd/system/gunicorn.service
 
 sudo systemctl start gunicorn.socket
