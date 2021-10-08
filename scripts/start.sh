@@ -5,6 +5,7 @@ cat $set_add/scripts/gunicorn.service > /etc/systemd/system/gunicorn.service
 sudo systemctl start gunicorn.socket
 sudo systemctl enable gunicorn.socket
 
+touch /etc/nginx/sites-available/hello
 cat $set_add/scripts/nginx >> /etc/nginx/sites-available/hello
 
 sudo ln -s /etc/nginx/sites-available/hello /etc/nginx/sites-enabled
